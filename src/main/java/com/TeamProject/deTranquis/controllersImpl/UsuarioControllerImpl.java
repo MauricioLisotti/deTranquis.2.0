@@ -22,12 +22,20 @@ public class UsuarioControllerImpl implements UsuarioController {
         return usuarioService.findAllUsuarios();
     }
 
-    // http://localhost:8888/usuario/1 (GET)
+    // http://localhost:8888/usuario/id/1 (GET)
     @Override
-    @RequestMapping(value = "/usuario/{id}", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/usuario/id/{id}", method = RequestMethod.GET, produces = "application/json")
     public Optional<Usuario> getUsuarioById(@PathVariable Long id) {
         return usuarioService.findUsuarioById(id);
     }
+
+    // http://localhost:8888/usuario/id/1 (GET)
+    @Override
+    @RequestMapping(value = "/usuario/username/{username}", method = RequestMethod.GET, produces = "application/json")
+    public Usuario findByUsername(@PathVariable String username) {
+        return usuarioService.getUsuario(username);
+    }
+
 
     // http://localhost:8888/usuario/add (ADD)
     @Override

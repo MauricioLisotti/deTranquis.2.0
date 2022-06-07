@@ -26,6 +26,10 @@ public class UsuarioServiceImpl implements UsuarioService {
     public Optional<Usuario> findUsuarioById(Long id) {
         Optional<Usuario> usuario = usuarioRepository.findById(id);
         return usuario;
+    }
+    @Override
+    public Usuario getUsuario(String username){
+        return usuarioRepository.findByUsername(username);
 
     }
 
@@ -52,14 +56,18 @@ public class UsuarioServiceImpl implements UsuarioService {
         if (usuarioRepository.findById(num).isPresent()) {
             Usuario usuarioToUpdate = new Usuario();
             usuarioToUpdate.setId(usuarioUpdated.getId());
-            usuarioToUpdate.setNickname(usuarioUpdated.getNickname());
+            usuarioToUpdate.setUsername(usuarioUpdated.getUsername());
+            usuarioToUpdate.setPassword(usuarioUpdated.getPassword());
             usuarioToUpdate.setNombre(usuarioUpdated.getNombre());
             usuarioToUpdate.setApellido(usuarioUpdated.getApellido());
             usuarioToUpdate.setCorreo(usuarioUpdated.getCorreo());
+            usuarioToUpdate.setImagenPerfil(usuarioUpdated.getImagenPerfil());
+            usuarioToUpdate.setTipo(usuarioUpdated.getTipo());
 
             usuarioRepository.save(usuarioToUpdate);
             return "Usuario modificado";
         }
         return "Error al modificar el usuario.";
     }
+
 }

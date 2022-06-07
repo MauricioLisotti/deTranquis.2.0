@@ -8,13 +8,17 @@ import java.util.Optional;
 
 public interface UsuarioService {
 
-    public List<Usuario> findAllUsuarios();
+    List<Usuario> findAllUsuarios();
 
-    public Optional<Usuario> findUsuarioById(Long id);
+    Optional<Usuario> findUsuarioById(Long id);
 
-    public Usuario saveUsuario(Usuario usuarioNew);
+    Usuario saveUsuario(Usuario usuarioNew);
 
-    public String deleteUsuario(Long id);
+    String deleteUsuario(Long id);
 
-    public String updateUsuario(Usuario usuarioNew);
+    Usuario getUsuario(String username);
+
+    String updateUsuario(Usuario usuarioNew);
+
+
 }

@@ -13,6 +13,8 @@ public interface UsuarioController {
 
     public Optional<Usuario> getUsuarioById(Long id);
 
+    public Usuario findByUsername(String username);
+
     public Usuario addUsuario(Usuario usuario);
 
     public String deleteUsuario(Long id);

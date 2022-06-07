@@ -25,11 +25,11 @@ public class Usuario {
     @Column(name = "id")
     Long id;
 
-    @Column(name = "nickname")
-    String nickname;
+    @Column(name = "username")
+    String username;
 
-    @Column(name = "clave")
-    String clave;
+    @Column(name = "password")
+    String password;
 
     @Column(name = "nombre")
     String nombre;
@@ -39,4 +39,11 @@ public class Usuario {
 
     @Column(name = "correo")
     String correo;
+
+    @Column(name = "imagenperfil")
+    String imagenPerfil;
+
+    @Column(name = "tipo")
+    String tipo;
+
 }
