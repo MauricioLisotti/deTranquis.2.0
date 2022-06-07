@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-@SpringBootApplication(/* exclude = { SecurityAutoConfiguration.class } */)
+@SpringBootApplication()
 public class DeTranquisApplication {
 
 	public static void main(String[] args) {
@@ -17,3 +17,6 @@ public class DeTranquisApplication {
 		return new BCryptPasswordEncoder();
 	}
 }
+
+
+// /* exclude = { SecurityAutoConfiguration.class } */

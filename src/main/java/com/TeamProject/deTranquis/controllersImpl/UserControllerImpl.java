@@ -92,7 +92,7 @@ public class UserControllerImpl  {
 
     // http://localhost:8888/user/add (ADD)
     @RequestMapping(value = "/user/add", method = RequestMethod.POST, produces = "application/json")
-    public User addUser(User user) {
+    public User save(User user) {
         return userService.saveUser(user);
     }
 
