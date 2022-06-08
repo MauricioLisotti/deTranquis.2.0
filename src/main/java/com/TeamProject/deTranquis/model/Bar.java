@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 @Data
@@ -15,7 +16,7 @@ import lombok.*;
 @Table(name = "bar")
 
 public class Bar {
-
+    @Autowired
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -23,45 +24,45 @@ public class Bar {
 
 
     @Column(name = "NOMBRE")
-    String nombreBar;
+    String nombre;
 
 
     @Column(name = "TELEFONO")
-    String telefonoBar;
+    String telefono;
 
 
     @Column(name = "IMAGENBAR")
-    String imagenBar;
+    String imagenbar;
 
 
     @Column(name = "DIRECCION")
-    String direccionBar;
+    String direccion;
 
 
     @Column(name = "CATPRECIO")
-    String catPrecio;
+    String catprecio;
 
 
     @Column(name = "AREA")
-    String areabar;
+    String area;
 
 
     @Column(name = "CATEGORIA")
-    String categoriaBar;
+    String categoria;
 
     @Column(name = "DESCRIPCION")
-    String descripcionBar;
+    String descripcion;
 
 
     @Column(name = "ESPECIALIDADES")
-    String especialidadesBar;
+    String especialidades;
 
 
     @Column(name = "redessociales")
-    String redesSociales;
+    String redessociales;
 
 
-    @Column(name = "id_propietario_propietario")
-    String idPropietario;
+    @Column(name = "iduserprop")
+    String iduserprop;
 }
 

@@ -1,17 +1,13 @@
 package com.TeamProject.deTranquis.serviceImpl;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.sql.*;
+
 import com.TeamProject.deTranquis.model.Bar;
 import com.TeamProject.deTranquis.repository.BarRepository;
 import com.TeamProject.deTranquis.service.BarService;
-import org.hibernate.mapping.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Service
@@ -56,17 +52,17 @@ public class BarServiceImpl implements BarService {
         if (barRepository.findById(num).isPresent()) {
             Bar barToUpdate = new Bar();
             barToUpdate.setIdBar(barUpdated.getIdBar());
-            barToUpdate.setNombreBar(barUpdated.getNombreBar());
-            barToUpdate.setTelefonoBar(barUpdated.getTelefonoBar());
-            barToUpdate.setImagenBar(barUpdated.getImagenBar());
-            barToUpdate.setDireccionBar(barUpdated.getDireccionBar());
-            barToUpdate.setCatPrecio(barUpdated.getCatPrecio());
-            barToUpdate.setAreabar(barUpdated.getAreabar());
-            barToUpdate.setCategoriaBar(barUpdated.getCategoriaBar());
-            barToUpdate.setDescripcionBar(barUpdated.getDescripcionBar());
-            barToUpdate.setEspecialidadesBar(barUpdated.getEspecialidadesBar());
-            barToUpdate.setRedesSociales(barUpdated.getRedesSociales());
-            barToUpdate.setIdPropietario(barUpdated.getIdPropietario());
+            barToUpdate.setNombre(barUpdated.getNombre());
+            barToUpdate.setTelefono(barUpdated.getTelefono());
+            barToUpdate.setImagenbar(barUpdated.getImagenbar());
+            barToUpdate.setDireccion(barUpdated.getDireccion());
+            barToUpdate.setCatprecio(barUpdated.getCatprecio());
+            barToUpdate.setArea(barUpdated.getArea());
+            barToUpdate.setCategoria(barUpdated.getCategoria());
+            barToUpdate.setDescripcion(barUpdated.getDescripcion());
+            barToUpdate.setEspecialidades(barUpdated.getEspecialidades());
+            barToUpdate.setRedessociales(barUpdated.getRedessociales());
+            barToUpdate.setIduserprop(barUpdated.getIduserprop());
 
 
 
